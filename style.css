@@ -1,170 +1,246 @@
+/* Importar fontes do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Quicksand:wght@500&display=swap');
 
+/* Aplicar estilos gerais a todos os elementos */
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;  
+    margin: 0; /* remover margens */
+    padding: 0; /* remover padding */
+    box-sizing: border-box;  /* tornar todos os elementos responsivos */
 }
 
+/* Estilo do container principal */
 .container {
-    max-width: 1300px;
-    margin: 0;
-    padding: 0 4%;
+    max-width: 1300px; /* definir largura máxima */
+    margin: 0; /* remover margem */
+    padding: 0 4%; /* adicionar padding */
 }
 
+/* Estilo do body */
 body {
-    min-height: 100vh;
-    background-image: linear-gradient(134deg, #c0fdff, 45%, white);
+    min-height: 100vh; /* definir altura mínima */
+    background-image: linear-gradient(134deg, #c0fdff, 45%, white); /* adicionar gradiente de cor de fundo */
 }
 
+/* Estilo da barra de navegação */
 nav {
-    padding-top: 20px;
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
+    padding-top: 20px; /* adicionar padding no topo */
+    display:flex; /* exibir elementos na linha */
+    align-items: center; /* alinhar itens ao centro */
+    justify-content: space-between; /* distribuir espaço entre os elementos */
 }
 
+/* Estilo da logo */
 nav .logo{
-    width: 100px;
+    width: 100px; /* definir largura */
 }
 
+/* Estilo da lista de itens na barra de navegação */
 nav ul {
-    list-style: none;
-    display:flex;
-    align-items: center;
+    list-style: none; /* remover estilo da lista */
+    display:flex; /* exibir elementos na linha */
+    align-items: center; /* alinhar itens ao centro */
 }
 
+/* Estilo do ícone de menu */
 nav .menu-icon {
-    display: none;
-    cursor: pointer;
+    display: none; /* esconder por padrão */
+    cursor: pointer; /* mudar cursor quando passar sobre o elemento */
 }
 
+/* Estilo de cada item da lista */
 nav ul li {
-    padding: 20px;
+    padding: 20px; /* adicionar padding */
 }
+
+/* Estilo do efeito hover sobre cada item da lista */
 nav ul li:not(.lg)::after {
-    display: block;
-    content: '';
-    width: 0%;
-    background-color: #21295c;
-    transition: 0.5s;
-    height: 3px;
+    display: block; /* exibir elemento */
+    content: ''; /* não exibir conteúdo */
+    width: 0%; /* definir largura inicial */
+    background-color: #21295c; /* definir cor de fundo */
+    transition: 0.5s; /* definir tempo de transição */
+    height: 3px; /* definir altura */
 }
 nav ul li:hover::after {
-    width: 100%;
+    width: 100%; /* mudar largura quando hover sobre o item */
 }
+
+/* Este bloco de código CSS define estilos para a navegação */
 nav ul li.lg {
-    border: 1px solid #21295c;
-    border-radius: 30px;
-    padding: 5px 40px;
-    margin-left: 30px;
+border: 1px solid #21295c; /* cor da borda */
+border-radius: 30px; /* arredondamento das bordas */
+padding: 5px 40px; /* espaçamento interno */
+margin-left: 30px; /* margem externa à esquerda */
 }
 nav ul li a {
-   color:#f25c54;
-   text-decoration: none;
-   font-size: 17px;
-   font-family: 'Quicksand', sans-serif;
+color:#f25c54; /* cor do texto */
+text-decoration: none; /* remove sublinhado do texto */
+font-size: 17px; /* tamanho da fonte */
+font-family: 'Quicksand', sans-serif; /* tipo de fonte */
 }
 
+/* Este bloco de código CSS define estilos para o corpo principal da página */
 main {
-    display: flex;
-    align-items: center;
-    margin-top: 60px;
+display: flex; /* define o container como flex */
+align-items: center; /* alinha os itens ao centro */
+margin-top: 60px; /* margem superior */
 }
+
+/* Este bloco de código CSS define estilos para o texto principal */
 main .main_text {
-    width: 50%;
+width: 50%; /* largura */
 }
 main .main_text h1 {
-    font-size: 4.5rem;
-    display: block;
-    font-weight: normal;
-    color: #7e1f86;
-    font-family: 'Quicksand', sans-serif;
-}  
+font-size: 4.5rem; /* tamanho da fonte */
+display: block; /* display block para o título h1 */
+font-weight: normal; /* peso normal */
+color: #7e1f86; /* cor da fonte */
+font-family: 'Quicksand', sans-serif; /* tipo de fonte */
+}
 main .main_text h2 {
-    font-size: 4.5rem;
-    display: block;
-    font-weight: normal;
-    color: #7e1f86;
-    font-family: 'Quicksand', sans-serif;
-}  
+font-size: 4.5rem; /* tamanho da fonte */
+display: block; /* display block para o título h2 */
+font-weight: normal; /* peso normal */
+color: #7e1f86; /* cor da fonte */
+font-family: 'Quicksand', sans-serif; /* tipo de fonte */
+}
 
+/* Este bloco de código CSS define estilos para o subtítulo */
 main .main_text h3 {
-    margin: 20px 0 40px;
-    width: 100%;
-    background-color: #fe938c;
-    color: white;
-    padding: 0 5px;
-    font-size: 2rem;
-    text-align: center;
-    font-family: 'Dosis', sans-serif;
+margin: 20px 0 40px; /* margem superior e inferior */
+width: 100%; /* largura */
+background-color: #fe938c; /* cor de fundo */
+color: white; /* cor da fonte */
+padding: 0 5px; /* espaçamento interno */
+font-size: 2rem; /* tamanho da fonte */
+text-align: center; /* alinhamento ao centro */
+font-family: 'Dosis', sans-serif; /* tipo de fonte */
 }
+
+/* Estilização para o elemento main .main_text p */
 main .main_text p {
-    color:#21295c;
-    margin:20px 0 40px;
-    width:90%;
-    font-size: 1.3rem;
-    font-family: 'Dosis' , sans-serif;
-    text-align: justify;
+  /* Define a cor da fonte como #21295c */
+  color:#21295c;
+  /* Define uma margem superior de 20px, margem inferior de 40px e margem esquerda e direita automática */
+  margin:20px 0 40px;
+  /* Define a largura do elemento como 90% */
+  width:90%;
+  /* Define o tamanho da fonte como 1.3rem */
+  font-size: 1.3rem;
+  /* Define a fonte utilizada como "Dosis", caso não seja encontrada, utiliza a fonte "sans-serif" */
+  font-family: 'Dosis' , sans-serif;
+  /* Alinha o texto justificado */
+  text-align: justify;
 }
+
+/* Estilização para o elemento main .main_img */
 main .main_img {
-    width:500%;
+  /* Define a largura do elemento como 500% */
+  width:500%;
 }
+
+/* Estilização para o elemento main .main_img img */
 main .main_img img{
-    width:80%;
+  /* Define a largura da imagem como 80% */
+  width:80%;
 }
 
+/* Media query para dispositivos com largura máxima de 850px */
 @media (max-width: 850px) {
-    nav .menu-icon{
-        display: block;
-    }
-    nav ul {
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: #9d79bc;
-        flex-direction: column;
-        justify-content: center;
-        height: 100%;
-        width: 60%;
-        transform: translateX(-100%);
-        transform: 0.6s;
-    }
-    nav ul.activo {
-        transform: translateX(0%);
-    }
-    nav ul li.lg {
-        border: 1px solid white;
-        margin-left: 0;
-    }
-    nav ul li:not(.lg)::after {
-        background-color: white;
-    }
-    nav ul li a {
-        color: white;
-        font-size: 24px;
-    }
-    
-    main {
-        flex-direction: column;
-        padding: 20px;
-    }
-    main .main_text {
-        width: 100%;
-        text-align: center;
-    }
-    main .main_img {
-        width: 100%;
-        margin-top: 70px;
-    }
+  /* Estilização para o elemento nav .menu-icon */
+  nav .menu-icon{
+      /* Define o tipo de exibição como bloco */
+      display: block;
+  }
 
-@media (max-width: 400px){
-    main .main_text h1 {
-    font-size: 3.5rem;
-    }
-    main .main_text h2 {
-        font-size: 3.5rem;
-    }
+  /* Estilização para o elemento nav ul */
+  nav ul {
+      /* Define a posição do elemento como fixa */
+      position: fixed;
+      /* Define a margem superior como 0 */
+      top: 0;
+      /* Define a margem esquerda como 0 */
+      left: 0;
+      /* Define a cor de fundo como #9d79bc */
+      background-color: #9d79bc;
+      /* Define a direção da flexbox como coluna */
+      flex-direction: column;
+      /* Define a justificação dos itens como centralizado */
+      justify-content: center;
+      /* Define a altura do elemento como 100% */
+      height: 100%;
+      /* Define a largura do elemento como 60% */
+      width: 60%;
+      /* Define a animação de translação do elemento como translateX(-100%) */
+      transform: translateX(-100%);
+      /* Define a duração da animação como 0.6s */
+      transform: 0.6s;
+  }
+
+/* Estilização da seção nav com a classe "activo" */
+nav ul.activo {
+  /* Aplica a transformação de translateX(0%) */
+  transform: translateX(0%);
 }
 
+/* Estilização da seção nav com a classe "lg" */
+nav ul li.lg {
+  /* Adiciona uma borda branca sólida */
+  border: 1px solid white;
+  /* Remove o espaçamento à esquerda */
+  margin-left: 0;
+}
+
+/* Estilização de todos os elementos li, exceto aqueles com a classe "lg" */
+nav ul li:not(.lg)::after {
+  /* Adiciona uma cor branca de fundo */
+  background-color: white;
+}
+
+/* Estilização de todos os elementos a dentro dos elementos li */
+nav ul li a {
+  /* Adiciona uma cor branca */
+  color: white;
+  /* Define o tamanho da fonte para 24px */
+  font-size: 24px;
+}
+
+/* Estilização da seção main */
+main {
+  /* Define a direção da flexbox como coluna */
+  flex-direction: column;
+  /* Adiciona 20px de padding */
+  padding: 20px;
+}
+
+/* Estilização da seção main com a classe "main_text" */
+main .main_text {
+  /* Define a largura como 100% */
+  width: 100%;
+  /* Centraliza o texto */
+  text-align: center;
+}
+
+/* Estilização da seção main com a classe "main_img" */
+main .main_img {
+  /* Define a largura como 100% */
+  width: 100%;
+  /* Adiciona 70px de margem no topo */
+  margin-top: 70px;
+}
+
+/* Estilização para resoluções de tela menores que 400px */
+@media (max-width: 400px) {
+  /* Estilização do h1 dentro da seção main com a classe "main_text" */
+  main .main_text h1 {
+    /* Define o tamanho da fonte para 3.5 rem */
+    font-size: 3.5rem;
+  }
+  
+  /* Estilização do h2 dentro da seção main com a classe "main_text" */
+  main .main_text h2 {
+    /* Define o tamanho da fonte para 3.5 rem */
+    font-size: 3.5rem;
+  }
+}
 }
