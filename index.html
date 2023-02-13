@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
+    <!-- Definindo o conjunto de caracteres utilizado -->
     <meta charset="UTF-8">
+    <!-- Ajuste de compatibilidade com navegadores Internet Explorer -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Ajuste da largura da tela para diferentes dispositivos -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Adição do arquivo de estilo CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Título da página -->
     <title>Landing Page IandraRC</title>
 </head>
-
 <body>
+    <!-- Container principal -->
     <div class="container">
+        <!-- Bloco de navegação -->
         <nav>
+          <!-- Logo do site -->
           <div class="logo">
+            <!-- Link para a página inicial -->
             <a href="index.html"> <img src="Icone IandraRC.svg" width="100%"> </a>
           </div>  
+          <!-- Lista de links de navegação -->
           <ul>
             <li> <a href="#">Home</a></li>
             <li> <a href="#">Sobre Mim</a></li>
@@ -23,34 +31,50 @@
             <li> <a href="#">Contato</a></li>
             <li class="lg"> <a href="#">Login</a></li>
           </ul>
+          <!-- Ícone do menu -->
           <div class="menu-icon"> 
+            <!-- Imagem para representar o ícone -->
             <img src="menu.png">
           </div>
         </nav>
+    <!-- Bloco principal de conteúdo -->
     <main> 
+        <!-- Bloco de texto -->
         <div class="main_text">
+            <!-- Título 1 -->
             <h1><strong>IANDRA </strong></h1> 
+            <!-- Título 2 -->
             <h2><strong>CAUZZO</strong></h2> 
+            <!-- Título 3 -->
             <h3>Full-Stack Developer</h3>
+            <!-- Parágrafo -->
             <p> Essa é uma landing page criada com o intuíto de apresentar um pouco sobre meu trabalho, utilizando as linguagens HTML e 
                 CSS. Esse projeto contém um código responsivo para fornecer a melhor experiência para o úsuario independente do device ou 
                 resolução utilizada. Fique à vontade para conhecer mais sobre mim e meus projetos utilizando os guia de navegação acima. </p>
         </div>
-        <div class="main_img"> <img src="todas juntas.svg"></div>
-    </main>
-    </div>
-    <script>
-        var menu= document.querySelector('nav ul');
-        var menuIcon= document.querySelector('nav .menu-icon');
-        var menuIconImg= document.querySelector('nav .menu-icon img');
+      <!-- Área de código JavaScript para fazer a interação do menu com a imagem -->
+  <script>
+  // Seleciona a tag ul dentro da tag nav
+     var menu = document.querySelector('nav ul');
+  // Seleciona a classe .menu-icon dentro da tag nav
+     var menuIcon = document.querySelector('nav .menu-icon');
+  // Seleciona a imagem dentro da classe .menu-icon
+    var menuIconImg = document.querySelector('nav .menu-icon img');
 
-        menuIcon.addEventListener ('click',()=>{
-            menu.classList.toggle ('activo');
-            if (menuIconImg.getAttribute ("src") == 'menu.png'){
-                menuIconImg.getAttribute ("src","close.png");
-            } else{menuIconImg.getAttribute ("src","menu.png")}
-        })
-    </script>
+  // Adiciona um evento de clique ao menuIcon
+  menuIcon.addEventListener ('click', () => {
+      // Adiciona ou remove a classe "ativo" ao menu
+      menu.classList.toggle ('ativo');
+      // Verifica se a imagem atual é "menu.png"
+      if (menuIconImg.getAttribute ("src") == 'menu.png') {
+          // Se for, muda a imagem para "close.png"
+          menuIconImg.getAttribute ("src","close.png");
+      } else {
+          // Se não for, muda a imagem para "menu.png"
+          menuIconImg.getAttribute ("src","menu.png");
+      }
+  })
+  </script>
 </body>
 
 </html>
